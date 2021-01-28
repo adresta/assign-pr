@@ -3,7 +3,7 @@ const github = require("@actions/github");
 const context = github.context;
 
 async function run() {
-  const pullRequestAuthor = context.payload.sender?.login;
+  const pullRequestAuthor = context.payload.sender && context.payload.sender.login;
 
   if (!pullRequestAuthor) {
     console.log("context.payload");
