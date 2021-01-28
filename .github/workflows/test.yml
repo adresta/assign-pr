@@ -1,0 +1,17 @@
+name: Assign Random Reviewer
+
+on: pull_request
+
+jobs:
+  assign:
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - name: Test the action
+        uses: adresta/assign-pr
+        with:
+          reviewers:
+            mbiegert
+            adresta
+
+

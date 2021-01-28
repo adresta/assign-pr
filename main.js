@@ -25,9 +25,12 @@ async function run() {
     .map(s => s.trim())
     .filter(x => x !== "" && x !== pullRequestAuthor);
 
-  // do a random call
-  const randomIndex = Math.floor(Math.random() * possibleAssignees.length);
+  if (possibleAssignees.length < 1) {
+    throw new Error("you need to specify at least one possible reviewer that is not the author");
+  }
 
+  // do a random selection
+  const randomIndex = Math.floor(Math.random() * (possibleAssignees.length - 1));
   const newAssignee = possibleAssignees[randomIndex];
   console.log("Selected assignee:", newAssignee);
 
