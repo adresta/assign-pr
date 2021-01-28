@@ -1,0 +1,13 @@
+{
+  "name": "assign-pr",
+  "version": "1.0.0",
+  "description": "Github action to assign a pull request to a random github user.",
+  "main": "main.js",
+  "repository": "https://github.com/adresta/assign-pr",
+  "author": "Adresta AG",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
