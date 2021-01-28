@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Test the action
-        uses: adresta/assign-pr
+        uses: adresta/assign-pr@master
         with:
           reviewers:
             mbiegert
