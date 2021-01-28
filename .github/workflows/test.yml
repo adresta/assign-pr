@@ -10,7 +10,7 @@ jobs:
       - name: Test the action
         uses: adresta/assign-pr@master
         with:
-          reviewers:
+          reviewers: |
             mbiegert
             adresta
 
