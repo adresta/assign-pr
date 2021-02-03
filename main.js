@@ -30,7 +30,7 @@ async function run() {
   }
 
   // do a random selection
-  const randomIndex = Math.floor(Math.random() * (possibleAssignees.length - 1));
+  const randomIndex = Math.floor(Math.random() * (possibleAssignees.length));
   const newAssignee = possibleAssignees[randomIndex];
   console.log("Selected assignee:", newAssignee);
 
