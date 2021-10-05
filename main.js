@@ -29,8 +29,17 @@ async function run() {
     throw new Error("you need to specify at least one possible reviewer that is not the author");
   }
 
+  console.log("Potential Assignees List", possibleAssignees);
+
   // do a random selection
   const randomIndex = Math.floor(Math.random() * (possibleAssignees.length));
+  // output a number of random samples to debug
+  for (let i = 0; i<10; i++) {
+    const randomVal = Math.random() * (possibleAssignees.length);
+    console.log("raw", randomVal);
+    console.log("rounded", Math.floor(randomVal));
+  }
+  console.log("Selected randomIndex", randomIndex);
   const newAssignee = possibleAssignees[randomIndex];
   console.log("Selected assignee:", newAssignee);
 
